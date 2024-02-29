@@ -23,14 +23,12 @@ class HBNBCommand(cmd.Cmd):
     def do_create(self, arg):
         """create instance"""
 
-        args = arg.split()
-
-        if  len(args[0]) == 0:
+        if not arg:
             print("** class name missing **")
-        elif args[0] not in self.__classes:
+        elif arg not in self.__classes:
             print("** class doesn't exist **")
         else:
-            obj = eval(args[0])()
+            obj = eval(arg)()
             obj.save()
             id = obj.id
             print(id)
