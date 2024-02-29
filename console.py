@@ -25,12 +25,12 @@ class HBNBCommand(cmd.Cmd):
 
         args = arg.split()
 
-        if not arg:
+        if not args[0]:
             print("** class name missing **")
-        elif arg != "BaseModel":
+        elif args[0] not in self.__classes:
             print("** class doesn't exist **")
         else:
-            obj = eval(args[0])
+            obj = eval(args[0])()
             obj.save()
             id = obj.id
             print(id)
@@ -61,7 +61,7 @@ class HBNBCommand(cmd.Cmd):
             print("** instance id missing **")
         else:
             obj = storage.all()
-            obj_key = arg[0] + "." + arg[1]
+            obj_key = comand[0] + "." + comand[1]
             if obj_key in obj:
                 del(obj[obj_key])
                 storage.save()
