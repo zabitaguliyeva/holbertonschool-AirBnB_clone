@@ -61,7 +61,7 @@ class HBNBCommand(cmd.Cmd):
             obj = storage.all()
             obj_key = comand[0] + "." + comand[1]
             if obj_key in obj:
-                del(obj[obj_key])
+                del (obj[obj_key])
                 storage.save()
             else:
                 print("** no instance found **")
@@ -76,7 +76,8 @@ class HBNBCommand(cmd.Cmd):
             print("**class doesn't exist**")
         else:
             class_name = comand[0]
-            result_list = [str(v) for k, v in obj.items() if k.startswith(class_name + ".")]
+            result_list = [str(v) for k, v in obj.items()
+                           if k.startswith(class_name + ".")]
             print(result_list)
 
     def do_update(self, arg):
@@ -88,17 +89,22 @@ class HBNBCommand(cmd.Cmd):
         elif len(comand) == 1:
             print("** instance id missing **")
         elif len(comand) == 2:
-            print("** attribute name missing **")
+            key = "{}.{}".format(comand[0], comand[1])
+            print("my key", key)
+            if (key not in storage.all()):
+                print("** no instance found **")
+            else:
+                print("** attribute name missing **")
         elif len(comand) == 3:
-            
-
-         
-
-
-
-
-
-
+            print("** value missing **")
+        else:
+            key = comand[2]
+            value = comand[3]
+            data = storage.all()
+            for k, v in data.items():
+                if comand[1] == k.split('.')[1]:
+                    setattr(v, key, value.split("\"")[1])
+                    storage.save()
 
 
 if __name__ == "__main__":
