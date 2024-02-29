@@ -9,7 +9,7 @@ from models import storage
 
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
-    __classes = ["BaseModel", "xcv"]
+    __classes = ["BaseModel", "sss"]
 
     def do_quit(self, arg):
         """Quit command to exit the program\n"""
@@ -65,6 +65,23 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()
             else:
                 print("** no instance found **")
+
+    def do_all(self, arg):
+        comand = arg.split()
+        obj = storage.all()
+        if len(comand) == 0:
+            for v in obj.values():
+                print(v)
+        elif comand[0] not in self.__classes:
+            print("**class doesn't exist**")
+        else:
+            class_name = comand[0]
+            result_list = [str(v) for k, v in obj.items() if k.startswith(class_name + ".")]
+            print(result_list)
+
+
+         
+
 
 
 
