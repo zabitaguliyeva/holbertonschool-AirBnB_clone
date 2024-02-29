@@ -79,6 +79,18 @@ class HBNBCommand(cmd.Cmd):
             result_list = [str(v) for k, v in obj.items() if k.startswith(class_name + ".")]
             print(result_list)
 
+    def do_update(self, arg):
+        comand = arg.split()
+        if len(comand) == 0:
+            print("** class name missing **")
+        elif comand[0] not in self.__classes:
+            print("** class doesn't exist **")
+        elif len(comand) == 1:
+            print("** instance id missing **")
+        elif len(comand) == 2:
+            print("** attribute name missing **")
+        elif len(comand) == 3:
+            
 
          
 
