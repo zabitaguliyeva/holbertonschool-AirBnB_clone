@@ -28,9 +28,16 @@ cd holbertonschool-AirBnB_clone
 
 
 <h2 align="center">How to Use the Command Interpreter</h2>
-- create your data model
-- manage (create, update, destroy, etc) objects via a console / command interpreter
-- store and persist objects to a file (JSON file)
+
+- **Create Your Data Model:**
+  Define the structure of your data model. For example, you might have objects like `User`, `Product`, and `Order` with specific attributes.
+
+- **Manage Objects via the Console / Command Interpreter:**
+  Utilize the command-line interface (CLI) to perform various operations on your objects. This includes creating, updating, destroying, and other actions.
+
+- **Store and Persist Objects to a File (JSON File):**
+  Implement functionality to store and retrieve objects to and from a JSON file. This ensures data persistence between different sessions of using the command interpreter.
+
 
 The first piece is to manipulate a powerful storage system. This storage engine will give us an abstraction between “My object” and “How they are stored and persisted”. This means: from your console code (the command interpreter itself) and from the front-end and RestAPI you will build later, you won’t have to pay attention (take care) of how your objects are stored.
 
