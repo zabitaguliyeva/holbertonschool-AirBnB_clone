@@ -44,7 +44,7 @@ class TestPlaceModel(unittest.TestCase):
         self.assertEqual(self.place.name, "Chinar Plaza")
 
     def test_description(self):
-        self.assertEqual(self.place.description, "Busines Center")
+        self.assertEqual(self.place.description, "Business Center")
 
     def test_number_rooms(self):
         self.assertEqual(self.place.number_rooms, 3)
