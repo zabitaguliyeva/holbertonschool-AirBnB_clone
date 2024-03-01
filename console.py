@@ -9,7 +9,7 @@ from models import storage
 
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
-    __classes = ["BaseModel", "sss"]
+    __classes = ["BaseModel", "User"]
 
     def do_quit(self, arg):
         """Quit command to exit the program\n"""
