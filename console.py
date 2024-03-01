@@ -73,7 +73,7 @@ class HBNBCommand(cmd.Cmd):
             for v in obj.values():
                 print(v)
         elif comand[0] not in self.__classes:
-            print("**class doesn't exist**")
+            print("** class doesn't exist **")
         else:
             class_name = comand[0]
             result_list = [str(v) for k, v in obj.items()
