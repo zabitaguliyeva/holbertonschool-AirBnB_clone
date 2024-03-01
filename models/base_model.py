@@ -22,7 +22,7 @@ class BaseModel:
 
     def __str__(self):
         name = self.__class__.__name__
-        return "[{}] ({}){}".format(name, self.id, vars(self))
+        return "[{}] ({}) {}".format(name, self.id, vars(self))
 
     def save(self):
         self.updated_at = datetime.now()
