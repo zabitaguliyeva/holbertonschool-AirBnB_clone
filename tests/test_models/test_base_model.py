@@ -2,7 +2,6 @@ import unittest
 from models.base_model import BaseModel
 from models import storage
 import json
-from datetime import datetime
 
 class TestBaseModel(unittest.TestCase):
     def test_save(self):
@@ -16,5 +15,9 @@ class TestBaseModel(unittest.TestCase):
         instance = BaseModel()
         new_dict = instance.to_dict()
         self.assertTrue(new_dict)
-        
+
+    def test_str(self):
+        instance = BaseModel()
+        res = instance.__str__()
+        self.assertEqual(res, "[{}] ({}) {}".format(instance.__class__.__name__, instance.id, vars(instance)))
         
