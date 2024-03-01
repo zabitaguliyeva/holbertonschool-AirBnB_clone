@@ -5,12 +5,18 @@
 import cmd
 from models.base_model import BaseModel
 from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
 from models import storage
 
 
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
-    __classes = ["BaseModel", "User"]
+    __classes = ["BaseModel", "User", "State",
+                 "City", "Amenity", "Place", "Review"]
 
     def do_quit(self, arg):
         """Quit command to exit the program\n"""
@@ -103,10 +109,6 @@ class HBNBCommand(cmd.Cmd):
                     if comand[1] == k.split('.')[1]:
                         setattr(v, comand[2], comand[3].split("\"")[1])
                         storage.save()
-
-
-
-
 
 
 if __name__ == "__main__":
