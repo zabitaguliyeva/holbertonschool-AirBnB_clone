@@ -82,8 +82,6 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, arg):
         comand = arg.split()
-        print(self.__classes)
-
         if len(comand) == 0:
             print("** class name missing **")
         elif comand[1] not in self.__classes:
