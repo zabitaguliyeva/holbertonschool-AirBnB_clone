@@ -7,6 +7,7 @@
 </div>
 
 
+<br>
 This project introduces a command-line interpreter (CLI) to manage AirBnB elements. It's the first step in creating a full web app replica of AirBnB. The CLI allows users to interact with different objects—users, states, cities, places, amenities, reviews—using simple commands.
 
 <h2 align="center">AirBnB Clone Command Interpreter</h2>
@@ -25,7 +26,22 @@ cd holbertonschool-AirBnB_clone
 ./console.py
 ```
 
+
 <h2 align="center">How to Use the Command Interpreter</h2>
+ - create your data model
+ - manage (create, update, destroy, etc) objects via a console / command interpreter
+ - store and persist objects to a file (JSON file)
+
+The first piece is to manipulate a powerful storage system. This storage engine will give us an abstraction between “My object” and “How they are stored and persisted”. This means: from your console code (the command interpreter itself) and from the front-end and RestAPI you will build later, you won’t have to pay attention (take care) of how your objects are stored.
+
+This abstraction will also allow you to change the type of storage easily without updating all of your codebase.
+
+The console will be a tool to validate this storage engine
+
+<div align="center">
+  <img src="./assets/815046647d23428a14ca.png" alt="img" style="width:100%;">
+</div>
+
 
 The command interpreter supports the following commands:
 
