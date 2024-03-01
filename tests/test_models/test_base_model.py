@@ -7,6 +7,3 @@ class TestBaseModel(unittest.TestCase):
        instance = BaseModel()
        instance.save()
        self.assertIn("BaseModel." + instance.id, storage.all())
-
-if __name__ == "__main__":
-    unittest.main()
