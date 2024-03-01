@@ -5,7 +5,7 @@ import unittest
 from models import storage
 from models.user import User
 
-class TestUser(unittest.Testcase):
+class TestUser(unittest.TestCase):
     """Unit tests for the User class"""
 
     def setUp(self):

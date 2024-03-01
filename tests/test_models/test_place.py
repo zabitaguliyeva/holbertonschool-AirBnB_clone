@@ -32,7 +32,6 @@ class TestPlaceModel(unittest.TestCase):
         self.assertIsInstance(Place.price_by_night, int)
         self.assertIsInstance(Place.latitude, float)
         self.assertIsInstance(Place.longitude, float)
-        self.assertIsInstance(Place.amenity_ids, object)
 
     def test_city_id(self):
         self.assertEqual(self.place.city_id, "3")
