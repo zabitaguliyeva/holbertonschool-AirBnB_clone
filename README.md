@@ -2,9 +2,10 @@
 <font face="Anta" size="30">AirBnB clone - The console</font>
 </h1>
 
-<div align="center" alt="GIF" style="width:100%;">
-  ![GIF](./assets/563b97a87fa44cff9d001760.gif)
+<div align="center">
+  <img src="./assets/563b97a87fa44cff9d001760.gif" alt="GIF" style="width:100%;">
 </div>
+
 
 This project introduces a command-line interpreter (CLI) to manage AirBnB elements. It's the first step in creating a full web app replica of AirBnB. The CLI allows users to interact with different objects—users, states, cities, places, amenities, reviews—using simple commands.
 
@@ -113,5 +114,6 @@ python3 -m unittest discover tests
 
 <h2 align="center">Authors</h2>
 
-- [Elchin Jafarli](https://www.linkedin.com/in/elchin-jafarli/)
-- [Zabita Guliyeva](https://www.linkedin.com/in/zabita-quliyeva-43b96b21a/)
+- [**Elchin Jafarli**](https://www.linkedin.com/in/elchin-jafarli/)
+- [**Zabita Guliyeva**](https://www.linkedin.com/in/zabita-quliyeva-43b96b21a/)
+
