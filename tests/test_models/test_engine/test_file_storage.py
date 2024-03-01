@@ -17,3 +17,10 @@ class TestFileStorage(unittest.TestCase):
         base_instance = BaseModel()
         fs_instance = FileStorage()
         self.assertIn(base_instance, fs_instance.all().values())
+
+    def test_reload(self):
+        instance = FileStorage()
+        instance.save()
+        instance._FileStorage__objects.clear()
+        instance.reload()
+        self.assertNotEqual(len(instance._FileStorage__objects), 0)
